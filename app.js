@@ -1,19 +1,31 @@
-(function () {
-    'use strict';
-    
-    angular.module('lunch', [])
-    .controller('lunchController', lunchController);
-    
-    lunchController.$inject = ['$scope'];
-    function lunchController($scope) {
-      $scope.name = "Yaakov";
-      $scope.status="hungry";
-      $scope.saymessage=function() {
-        return "Hello Man";
+(function(){
+  "use strict";
+
+  angular.module("LunchCheck", [])
+
+  .controller("checkMyLunch", checkMyLunch);
+
+  checkMyLunch.$inject = ['$scope'];
+  function checkMyLunch($scope){
+
+    $scope.buttonIsClicked = function (){
+
+      if($scope.value===undefined){
+        $scope.output = "Empty";
       }
-      $scope.click=function(){
-        $scope.status="fed";
-      };
-    }
-    
-    })();
+
+      else{
+        var inputList = $scope.value.split(",");
+        var numOfItems = inputList.length;
+
+        if(numOfItems<=3){
+          $scope.output = "Enjoy!";
+        }
+        else
+          $scope.output = "Too much!";
+      }
+
+    };
+  };
+
+})();

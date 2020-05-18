@@ -1,0 +1,26 @@
+*{
+    background-color: skyblue;
+    color:white;
+    font-weight: bold;
+    font-family:arial;
+    font-size: 1.5rem;
+    text-align: center;
+    padding:20px;
+}
+
+h1{
+  font-size: 40px;
+}
+
+#input, #output{
+  background-color: #ffffff;
+  color:black;
+  border-radius: 6px;
+
+}
+
+button{
+  background-color: black;
+  font-size: 20px;
+  margin:40px;
+}
